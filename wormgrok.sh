@@ -1,18 +1,7 @@
 #!/bin/bash
 
-# Check if a directory argument is provided and validate it
-if [ -z "$1" ]; then
-    # No argument provided, use the current working directory
-    WORKDIR=$(pwd)
-else
-    # Get the absolute path of the directory to serve files from
-    WORKDIR=$(realpath "$1")
-    # Check if the directory exists
-    if [ ! -d "$WORKDIR" ]; then
-        echo "Directory $WORKDIR does not exist."
-        exit 2
-    fi
-fi
+# Use current directory
+WORKDIR=$(pwd)
 
 # Create the exit_wormgrok.sh script in /tmp
 cat > /tmp/exit_wormgrok.sh <<'EOF'
