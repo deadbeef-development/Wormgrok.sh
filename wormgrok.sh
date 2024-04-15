@@ -59,4 +59,4 @@ tmux send-keys "# Use exit-wormgrok to stop." C-m
 tmux send-keys C-m
 
 # Attach to the tmux session
-tmux attach-session -t Wormgrok
+( exec </dev/tty; exec <&1; tmux attach-session -t Wormgrok )
