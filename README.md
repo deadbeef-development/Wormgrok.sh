@@ -8,3 +8,8 @@ Host the files in a specific directory:
 ```bash
 curl https://wormgrok.run | bash ~/My-Files
 ```
+
+# Requirements
+- tmux
+- ngrok
+- python3
